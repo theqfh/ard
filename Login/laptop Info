@@ -3,3 +3,5 @@ Status prüfen:   git status
 Änderung commiten:  git commit -m "Deine Beschreibung der Änderungen"
 Änderung auf Github hochladen:   git push origin master
   
+
+In Git Bash ausführen:   ./auto_git_push.sh
