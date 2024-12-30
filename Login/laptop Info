@@ -1,0 +1,5 @@
+Status prüfen:   git status
+Änderung hinzufügen:  git add .
+Änderung commiten:  git commit -m "Deine Beschreibung der Änderungen"
+Änderung auf Github hochladen:   git push origin master
+  
