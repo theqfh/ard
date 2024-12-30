@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinn
+
+    </title>
+
+    <style>
+        body {
+            background-color: red;
+        }
+
+
+        .headline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            grid-area: eins;
+            padding-right: 15%;
+
+        }
+
+        .dropdown_list {
+            grid-area: drei;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px;
+            gap: 0px;
+            grid-template-areas:
+                "fünf sechs"
+            ;
+
+        }
+
+        .over {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px;
+            gap: 15px;
+            grid-template-areas:
+                "drei eins zwei"
+            ;
+            background-color: aliceblue;
+            border-radius: 10px;
+            border-color: azure;
+            width: 100%;
+
+        }
+
+        .button_login {
+            grid-area: zwei;
+            display: flex;
+            justify-content: right;
+            padding-top: 35px;
+            padding-right: 5%;
+
+        }
+
+        .loginButton {
+            border-radius: 5px;
+            border-width: 2px;
+            border-color: aqua;
+            width: 65px;
+            height: 30px;
+        }
+
+
+
+        .container {
+            grid-area: fünf;
+            display: block;
+            height: 25px;
+            overflow: hidden;
+            width: 140px;
+            background: aliceblue;
+            z-index: 1;
+
+        }
+
+        .container:hover {
+            overflow: visible;
+            height: 300px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .main ul li {
+            display: none;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .conatiner_dropdown {
+            padding-top: 35px;
+            padding-right: 35%;
+        }
+
+        .site {
+            padding-top: 15px;
+            font-size: 18px;
+        }
+
+        .weiterleitung {
+            background-color: white;
+            border-color: white;
+        }
+
+        .weiterleitung:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .container1 {
+            grid-area: sechs;
+            display: block;
+            height: 25px;
+            overflow: hidden;
+            width: 140px;
+            background: aliceblue;
+            z-index: 1;
+
+        }
+
+        .container1:hover {
+            overflow: visible;
+            height: 300px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        /*.headline_button{
+            width: 200px;
+            height: 100px;
+            background-color: aliceblue;
+            border-color: aliceblue;
+            font-size: 42px;
+        }
+        */
+
+        .containers {
+            padding: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 150px 150px 150px 150px 150px;
+            gap: 6px;
+            grid-template-areas:
+                "eins_quinn eins_quinn drei_quinn"
+                "eins_quinn eins_quinn drei_quinn"
+                "eins_quinn eins_quinn vier_quinn "
+                "zwei_quinn zwei_quinn fünf_quinn "
+                "zwei_quinn zwei_quinn fünf_quinn "
+
+            ;
+            z-index: 2;
+        }
+
+        .container2 {
+            grid-area: eins_quinn;
+            background-color: rgba(255, 255, 255, 0.982);
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 76%;
+            grid-template-areas:
+                "schule_headline schule_headline"
+                "schule_eins schule_zwei"
+            ;
+            gap: 5px;
+        }
+
+        .container3 {
+            grid-area: zwei_quinn;
+        }
+
+        .container4 {
+            grid-area: drei_quinn;
+        }
+
+        .container5 {
+            grid-area: vier_quinn;
+        }
+
+        .container6 {
+            grid-area: fünf_quinn;
+        }
+
+        .Kalender {
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .kalenderTermine {
+            font-size: 20px;
+            padding-left: 8px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .schule {
+            grid-area: schule_headline;
+            padding-left: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .aufgaben {
+            padding-left: 7px;
+        }
+
+        .Workout {
+            padding-left: 7px;
+        }
+
+        .schule_aufgaben {
+            grid-area: schule_eins;
+            background-color: rgb(206, 228, 248);
+            border-radius: 8px;
+            padding-left: 8px;
+
+        }
+
+        .stundenplan {
+            grid-area: schule_zwei;
+            background-color: rgb(206, 228, 248);
+            border-radius: 8px;
+        }
+
+        .aufgaben_überschrift {
+            font-size: 30px;
+        }
+
+        .neuenTermin {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .termine_kalender_liste {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="over">
+        <div class="conatiner_dropdown">
+            <div class="dropdown_list">
+                <div class="container">
+                    <div class="main" href="javascript:void(0)">Moin</div>
+
+                    <ul>
+
+                        <form action="index.html">
+                            <li class="site"><button class="weiterleitung">HOME</button></li>
+                        </form>
+                        <li class="site">
+                            <form action="fussball.html">
+                                <button class="weiterleitung">Fußball</button>
+                            </form>
+                        </li>
+
+                        <li class="site">
+                            <form action="login_quinn.html"><button class="weiterleitung">Quinn</button></form>
+                        </li>
+
+                        <li class="site">
+                            <form action="einkaufsliste.html">
+                                <button class="weiterleitung">Einkaufsliste</button>
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="container1">
+                    <div class="main" href="javascript:void(0)">Home</div>
+
+                    <ul>
+                        <li class="site">
+                            <form action="test.html">
+                                <button class="weiterleitung
+                                ">Test</button>
+                            </form>
+                        </li>
+
+                        <li class="site"><button class="weiterleitung">sub menu2</button></li>
+                        <li class="site"><button class="weiterleitung">sub menu3</button></li>
+                        <li class="site"><button class="weiterleitung">sub menu4</button></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="headline">WieSaQu</h1>
+
+
+        <form action="login.html" method="get">
+            <div class="button_login">
+                <button class="loginButton">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="containers">
+        <div class="container2">
+            <div class="schule">
+                <h1>Schule</h1>
+            </div>
+            <div class="schule_aufgaben">
+                <div class="aufgaben_überschrift">Aufgaben</div>
+                <div class="aufgaben_list">
+                    <ul id="list">
+                    </ul>
+                </div>
+
+            </div>
+            <div class="stundenplan">
+                <div>Stundenplan Quinn</div>
+                <div><img src="Screenshot 2024-08-10 134803.png" alt=""></div>
+            </div>
+        </div>
+        <div class="conatiner3" style="background-color: aqua;grid-area: zwei_quinn; border-radius: 10px;">
+            <div class="Kalender">Kalender</div>
+            <div class="kalenderTermine">Termine:
+                <div><input type="text" id="eingabeKalender" placeholder="Datum eingeben">
+                    <button id="datum_button" onclick="kalender()">Suchen</button>
+                </div>
+            </div>
+            <div class="termine_kalender_liste">
+                <ul id="uhrzeit_termineKalender">
+
+                </ul>
+                <ul id="aufgaben_termineKalender">
+
+                </ul>
+            </div>
+        </div>
+        <div class="conatiner4" style="background-color: aqua;grid-area: drei_quinn; border-radius: 10px;">
+            <div class="aufgaben">Meine Aufgaben</div>
+        </div>
+        <div class="conatiner5" style="background-color: aqua;grid-area: vier_quinn; border-radius: 10px;">
+            <div class="Workout">Workout</div>
+        </div>
+        <div class="conatiner6" style="background-color: aqua;grid-area: fünf_quinn; border-radius: 10px;">
+            <div class="neuenTermin">Neuen Termin zum Kalender hinzufügen</div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script>
+    let datum = new Date();
+    let day = datum.getDate();
+    let month = datum.getMonth();
+    let monat1 = month + 1;
+    let monat =  "0" +monat1
+    let year = datum.getFullYear();
+
+    let date = day + "." + monat + "." + year;
+
+    let eingabeKalenderStart = document.getElementById("eingabeKalender");
+    eingabeKalenderStart.value = date;
+
+
+    let liste = document.getElementById("list");
+
+    let input = ["Test", "Schulbücher mitnehmen", "Stifte mitnehmen"];
+
+    input_länge = input.length;
+
+
+    console.log(input_länge)
+
+    for (x = 0; input_länge > x; x++) {
+        console.log(x)
+
+        let newListItem = document.createElement("li")
+
+        newListItem.innerText = input[x];
+
+        liste.appendChild(newListItem);
+    }
+
+    kalender()
+
+    function kalender() {
+
+
+        let uhrzeitListe = document.getElementById("uhrzeit_termineKalender");
+        let aufgabenListe = document.getElementById("aufgaben_termineKalender");
+
+        //eingabe welches datum
+        let kalenderEingab = document.getElementById("eingabeKalender");
+        let kalenderEingabe = kalenderEingab.value
+
+        let formel = ["Datum", "Zeit", "Termin:"];
+        //Kalender einträge. Später aus der datenbank lesen
+        let datumKalender = ["23.08.2024", "11.08.2024 ", "12.08.2024"];
+        let uhrzeitKalender = ["15:00", "12:00", "18:00"];
+        let einträgeKalender = ["England Koffer packen", "Mittagessen machen", "Fußballtraining C-Jugend"]
+
+
+        let datumKalenderLänge = datumKalender.length
+
+        for (x = 0; x <= datumKalenderLänge; x++) {
+            console.log("Test")
+            console.log(datumKalender[x])
+            console.log(kalenderEingabe)
+            if (kalenderEingabe === datumKalender[x]) {
+                console.log("Right")
+                let newListItemKalender = document.createElement("div")
+                newListItemKalender.innerText = uhrzeitKalender[x];
+                uhrzeitListe.appendChild(newListItemKalender)
+
+                let newListItemAufgaben = document.createElement("div")
+                newListItemAufgaben.innerText= einträgeKalender[x];
+                aufgabenListe.appendChild(newListItemAufgaben)
+
+            }
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</html>

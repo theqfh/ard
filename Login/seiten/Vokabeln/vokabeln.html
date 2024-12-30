@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home
+
+    </title>
+
+    <style>
+        body {
+            background-color: red;
+        }
+
+
+        .headline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            grid-area: eins;
+            padding-right: 15%;
+
+        }
+
+        .dropdown_list {
+            grid-area: drei;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px;
+            gap: 0px;
+            grid-template-areas:
+                "fünf sechs"
+            ;
+
+        }
+
+        .over {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px;
+            gap: 15px;
+            grid-template-areas:
+                "drei eins zwei"
+            ;
+            background-color: aliceblue;
+            border-radius: 10px;
+            border-color: azure;
+            width: 100%;
+
+        }
+
+        .button_login {
+            grid-area: zwei;
+            display: flex;
+            justify-content: right;
+            padding-top: 35px;
+            padding-right: 5%;
+
+        }
+
+        .loginButton {
+            border-radius: 5px;
+            border-width: 2px;
+            border-color: aqua;
+            width: 65px;
+            height: 30px;
+        }
+
+
+
+        .container {
+            grid-area: fünf;
+            display: block;
+            height: 25px;
+            overflow: hidden;
+            width: 140px;
+            background: aliceblue;
+
+        }
+
+        .container:hover {
+            overflow: visible;
+            height: 300px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .main ul li {
+            display: none;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .conatiner_dropdown {
+            padding-top: 35px;
+            padding-right: 35%;
+        }
+
+        .site {
+            padding-top: 15px;
+            font-size: 18px;
+        }
+
+        .weiterleitung {
+            background-color: white;
+            border-color: white;
+        }
+
+        .weiterleitung:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .container1 {
+            grid-area: sechs;
+            display: block;
+            height: 25px;
+            overflow: hidden;
+            width: 140px;
+            background: aliceblue;
+
+        }
+
+        .container1:hover {
+            overflow: visible;
+            height: 300px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        /*.headline_button{
+            width: 200px;
+            height: 100px;
+            background-color: aliceblue;
+            border-color: aliceblue;
+            font-size: 42px;
+        }
+        */
+    </style>
+
+</head>
+
+<body>
+    <div class="over">
+        <div class="conatiner_dropdown">
+            <div class="dropdown_list">
+                <div class="container">
+                    <div class="main" href="javascript:void(0)">Lernen</div>
+
+                    <ul>
+
+                        <form action="index.html">
+                            <li class="site"><button class="weiterleitung">Klasse 5</button></li>
+                        </form>
+                        <li class="site">
+                            <form action="fussball.html">
+                                <button class="weiterleitung">Klasse 6</button>
+                            </form>
+                        </li>
+                        
+                            <li class="site"><form action="login_quinn.html"><button class="weiterleitung">Klasse 7</button></form></li>
+                      
+                        <li class="site">
+                            <form action="einkaufsliste.html">
+                                <button class="weiterleitung">Klasse 8</button>
+                            </form>
+                        </li>
+                        <li class="site"><button class="weiterleitung">Klasse 9</button></li>
+                        <li class="site"><button class="weiterleitung">Klasse 10</button></li>
+
+                    </ul>
+                </div>
+
+                <div class="container1">
+                    <div class="main" href="javascript:void(0)">Lernen</div>
+
+                    <ul>
+                        <li class="site">
+                            <form action="test.html">
+                                <button class="weiterleitung
+                                ">Test</button>
+                            </form>
+                        </li>
+
+                        <li class="site"><button class="weiterleitung">Test</button></li>
+                        <li class="site"><button class="weiterleitung">sub menu3</button></li>
+                        <li class="site"><button class="weiterleitung">sub menu4</button></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="headline">Vokabel Test</h1>
+
+
+        <form action="login.html" method="get">
+            <div class="button_login">
+                <button class="loginButton">Login</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

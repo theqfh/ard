@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        .container_login {
+          
+            padding-top: 15%;
+        
+        }
+
+        .input{
+            height: 120%;
+        }
+        
+        .button{
+            height: 145%;
+            
+        }
+        
+        .eingabe_benutzer{
+         
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .eingabe_password{
+           
+            padding-bottom: 15px;
+            display: flex;
+         
+            justify-content: center;
+        }
+        
+        .button_container{
+            display: flex;
+            justify-content: center;
+            padding-right: 6.5%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form action="geheime-seite.html" method="post">
+        <div class="container_login">
+
+            <div class="eingabe_benutzer" id="eingabe_benutzer">
+
+                <input class="input" name="benutzer" placeholder="Benutzername" type="text">
+            </div>
+            <div class="eingabe_password">
+
+                <input class="input" name="password" placeholder="Passwort" type="password">
+            </div>
+
+            <div class="button_container">
+                <button class="button">Einloggen</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
